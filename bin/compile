@@ -109,7 +109,7 @@ mv "$WORK_DIR/.local/bin" "$BUILD_DIR/.local"
 
 speak "Caching .stack-work"
 rsync -avq "$WORK_DIR/.stack-work/" "$SANDBOX_DIR"
-cp "$WORK_DIR/.stack-work" "$BUILD_DIR"
+cp -r "$WORK_DIR/.stack-work" "$BUILD_DIR"
 rm -rf "$WORK_DIR/.stack-work"
 
 speak "Finished!"
